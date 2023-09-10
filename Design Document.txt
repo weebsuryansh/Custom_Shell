@@ -1,0 +1,15 @@
+IMPLEMENTATION:
+
+The implementation is quite simple. 
+First, the command string is converted into an array of strings by splitting it via spaces.
+Then this array is sent into launch method.
+Launch method decides if piping is needed or not and appropriate method is called.
+When piping is not needed, simply a child process is created and then replaced by the execution of command entered.
+when piping is needed, multiple child processes are created whose inputs and ouput are connected via pipe.
+Upon termination, a custom handler is created for sigint to display the details.
+
+Contributions:
+Suryansh Kumar Singh: non-piped execution
+Suryansh Varshney: piped execution and signal handler
+
+github repo: https://github.com/weebsuryansh/Custom_Shell.git
